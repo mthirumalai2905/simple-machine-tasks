@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic styles for popup */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        #popup h2 {
+            margin-top: 0;
+        }
+        #close-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button to trigger popup -->
+    <button id="open-btn">Open Popup</button>
+
+    <!-- Popup Div -->
+    <div id="popup">
+        <h2>Popup Title</h2>
+        <p>This is the content of the popup.</p>
+        <button id="close-btn">Close</button>
+    </div>
+
+    <script>
+        // Get references to elements
+        const openBtn = document.getElementById('open-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const popup = document.getElementById('popup');
+
+        // Open the popup
+        openBtn.addEventListener('click', () => {
+            popup.style.display = 'block';
+        });
+
+        // Close the popup
+        closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
